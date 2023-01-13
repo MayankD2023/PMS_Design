@@ -5061,10 +5061,10 @@ transform:none
 	color: #146c43
 }
 .link-info {
-	color: #2255a4
+	color: #0dcaf0
 }
 .link-info:focus, .link-info:hover {
-	color: #1b4483
+	color: #3dd5f3
 }
 .link-warning {
 	color: #ffb848
