@@ -9163,7 +9163,7 @@ to {
 	vertical-align: middle
 }
 .table th, .table thead th {
-	font-weight: 500
+	font-weight: bold
 }
 .nowrap {
 	white-space: nowrap
