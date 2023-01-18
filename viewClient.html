@@ -6,7 +6,7 @@
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex,nofollow" />
-<title>View Project</title>
+<title>View Clients</title>
 <!-- Favicon icon -->
 <link rel="icon" type="image/png" sizes="16x16" href="" />
 <!-- Custom CSS -->
@@ -94,7 +94,7 @@
     <div class="page-breadcrumb">
       <div class="row">
         <div class="col-12 d-flex no-block align-items-center">
-          <h4 class="page-title">Project Name</h4>
+          <h4 class="page-title">View Clients</h4>
           <div class="ms-auto text-end">
             <button type="button" class="btn btn-warning btn-sm">
                     Back
@@ -108,54 +108,42 @@
         <div class="card">
           <div class="card-body">
             <div class="table-responsive">
-              <div class="dataTables_wrapper container-fluid">
+              <div id="zero_config_wrapper" class="dataTables_wrapper container-fluid">
                 <div class="row">
-                	<h4>Project Details</h4>
                   <div class="col-sm-12 d-flex">
                     <table class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Client Name</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
                       <tbody>
                         <tr>
-                          <td>ALM</td>
-                          <td>Capacuity</td>
-                          <td>10-10-2022</td>
+                          <td>Client Name-1</td>
+                          <td> <a href="editClient.html" class="link-success"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-pencil-alt fa-stack-1x fa-inverse"></i> </span> </a> <a href="#" class="link-danger"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-trash-alt fa-stack-1x fa-inverse"></i> </span> </a> </td>
+                        </tr>
+                        <tr>
+                          <td>Client Name-2</td>
+                          <td> <a href="editClient.html" class="link-success"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-pencil-alt fa-stack-1x fa-inverse"></i> </span> </a> <a href="#" class="link-danger"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-trash-alt fa-stack-1x fa-inverse"></i> </span> </a> </td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <div class="dataTables_wrapper container-fluid">
                 <div class="row">
-                	<h4>Current Employee</h4>
-                  <div class="col-sm-12 d-flex">
-                    <table class="table table-striped table-bordered">
-                      <tbody>
-                        <tr>
-                          <td>Employee Name</td>
-                          <td>Start Date</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div class="col-sm-12 col-md-5">
+                    <div class="dataTables_info" id="zero_config_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <div class="dataTables_wrapper container-fluid">
-                <div class="row">
-                	<h4>Previous Employee</h4>
-                  <div class="col-sm-12 d-flex">
-                    <table class="table table-striped table-bordered">
-                      <tbody>
-                        <tr>
-                          <td>Employee Name</td>
-                          <td>Start Date</td>
-                          <td>End Date</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div class="col-sm-12 col-md-7">
+                    <div class="dataTables_paginate paging_simple_numbers" id="zero_config_paginate">
+                      <ul class="pagination">
+                        <li class="paginate_button page-item previous disabled" id="zero_config_previous"><a href="#" aria-controls="zero_config" data-dt-idx="0" tabindex="0" class="page-link">Previous</a></li>
+                        <li class="paginate_button page-item active"><a href="#" aria-controls="zero_config" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                        <li class="paginate_button page-item "><a href="#" aria-controls="zero_config" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
+                        <li class="paginate_button page-item next" id="zero_config_next"><a href="#" aria-controls="zero_config" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -6,16 +6,17 @@
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex,nofollow" />
-<title>View Project</title>
+<title>Edit Role</title>
 <!-- Favicon icon -->
 <link rel="icon" type="image/png" sizes="16x16" href="" />
 <!-- Custom CSS -->
-<link href="css/datatables.min.css" rel="stylesheet" />
+<link href="css/jquery.steps.css" rel="stylesheet" />
+<link href="css/steps.css" rel="stylesheet" />
 <link href="css/style.min.css" rel="stylesheet" />
 </head>
 
 <body>
-<div id="main-wrapper">
+<div id="main-wrapper" data-layout="vertical">
   <header class="topbar" data-navbarbg="skin5">
     <nav class="navbar top-navbar navbar-expand-md navbar-dark">
       <div class="navbar-header" data-logobg="skin5"> <a class="navbar-brand" href="#"> <b class="logo-icon ps-2"> <img src="images/logo-icon.png" alt="homepage" class="light-logo" width="25" /> </b> <span class="logo-text ms-2"> <img src="images/logo-text.png" alt="homepage" class="light-logo" /> </span> </a> <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a> </div>
@@ -94,7 +95,7 @@
     <div class="page-breadcrumb">
       <div class="row">
         <div class="col-12 d-flex no-block align-items-center">
-          <h4 class="page-title">Project Name</h4>
+          <h4 class="page-title">Edit Role</h4>
           <div class="ms-auto text-end">
             <button type="button" class="btn btn-warning btn-sm">
                     Back
@@ -103,64 +104,33 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="card">
-          <div class="card-body">
-            <div class="table-responsive">
-              <div class="dataTables_wrapper container-fluid">
-                <div class="row">
-                	<h4>Project Details</h4>
-                  <div class="col-sm-12 d-flex">
-                    <table class="table table-striped table-bordered">
-                      <tbody>
-                        <tr>
-                          <td>ALM</td>
-                          <td>Capacuity</td>
-                          <td>10-10-2022</td>
-                        </tr>
-                      </tbody>
-                    </table>
+    <div class="container-fluid"> 
+      <!-- ============================================================== --> 
+      <!-- Start Page Content --> 
+      <!-- ============================================================== -->
+      <div class="card">
+        <div class="card-body wizard-content">
+          <form class="mt-3">
+            <div class="wizard clearfix">
+              <div class="content clearfix">
+                <section class="body current">
+                    <div class="form-group row">
+                      <label for="Rname" class="col-sm-3 text-center control-label col-form-label">Role Name</label>
+                      <div class="col-sm-6">
+                        <input type="text" class="form-control" id="Rname" value="Admin">
+                      </div>
+                    </div>
+                </section>
+                <div class="border-top text-center">
+                    <div class="card-body">
+                      <button type="button" class="btn btn-info">
+                        Update
+                      </button>
+                    </div>
                   </div>
-                </div>
               </div>
             </div>
-            <div class="table-responsive">
-              <div class="dataTables_wrapper container-fluid">
-                <div class="row">
-                	<h4>Current Employee</h4>
-                  <div class="col-sm-12 d-flex">
-                    <table class="table table-striped table-bordered">
-                      <tbody>
-                        <tr>
-                          <td>Employee Name</td>
-                          <td>Start Date</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <div class="dataTables_wrapper container-fluid">
-                <div class="row">
-                	<h4>Previous Employee</h4>
-                  <div class="col-sm-12 d-flex">
-                    <table class="table table-striped table-bordered">
-                      <tbody>
-                        <tr>
-                          <td>Employee Name</td>
-                          <td>Start Date</td>
-                          <td>End Date</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
