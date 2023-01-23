@@ -12,6 +12,7 @@
 <!-- Custom CSS -->
 <link href="css/jquery.steps.css" rel="stylesheet" />
 <link href="css/steps.css" rel="stylesheet" />
+<link href="css/select2.min.css" rel="stylesheet" />
 <link href="css/style.min.css" rel="stylesheet" />
 </head>
 
@@ -115,7 +116,7 @@
                   <div class="form-group row">
                     <label for="Cname" class="col-sm-3 text-center control-label col-form-label">Client Name</label>
                     <div class="col-sm-6">
-                      <select class="select2 form-select shadow-none">
+                      <select class="form-select shadow-none">
                         <option>Select</option>
                         <option value="">Client Name-1</option>
                         <option value="">Client Name-2</option>
@@ -125,7 +126,7 @@
                   <div class="form-group row">
                     <label for="Pname" class="col-sm-3 text-center control-label col-form-label">Project Name</label>
                     <div class="col-sm-6">
-                      <select class="select2 form-select shadow-none">
+                      <select class="form-select shadow-none">
                         <option>Select</option>
                         <option value="">Project Name-1</option>
                         <option value="">Project Name-2</option>
@@ -153,10 +154,12 @@
                   <div class="form-group row">
                     <label for="Ename" class="col-sm-3 text-center control-label col-form-label">Employee Name</label>
                     <div class="col-sm-6">
-                      <select class="select2 form-select shadow-none">
-                        <option>Select</option>
-                        <option value="">Emp-1</option>
-                        <option value="">Emp-2</option>
+                      <select class="select2 shadow-none mt-3" multiple="multiple" style="width: 100%">
+                      	<option value="">Employee-1</option>
+                        <option value="">Employee-2</option>
+                        <option value="">Employee-3</option>
+                        <option value="">Employee-4</option>
+                        <option value="">Employee-5</option>
                       </select>
                     </div>
                   </div>
@@ -199,12 +202,24 @@
 <script src="js/sidebarmenu.js"></script> 
 <script src="js/custom.min.js"></script> 
 <script src="js/datatables.min.js"></script> 
+<script src="js/select2.full.min.js"></script> 
+<script src="js/select2.min.js"></script> 
 <script>
       /****************************************
        *       Basic Table                   *
        ****************************************/
       $("#zero_config").DataTable();
+	  $(".select2").select2();
 	  
+	  var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
     </script>
 </body>
 </html>
