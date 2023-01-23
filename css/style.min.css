@@ -11611,7 +11611,7 @@ label {
     box-shadow: 0px 0px 15px 0px #ddd;
 }
 
-ul, #myUL {
+/*ul, #myUL {
   list-style-type: none;
 }
 
@@ -11647,4 +11647,4 @@ ul, #myUL {
 
 .active {
   display: block;
-}
+}*/
