@@ -6,7 +6,7 @@
 <!-- Tell the browser to be responsive to screen width -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="robots" content="noindex,nofollow" />
-<title>View Clients</title>
+<title>Task Details</title>
 <!-- Favicon icon -->
 <link rel="icon" type="image/png" sizes="16x16" href="" />
 <!-- Custom CSS -->
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<div id="main-wrapper">
+<div id="main-wrapper" data-layout="vertical">
   <header class="topbar" data-navbarbg="skin5">
     <nav class="navbar top-navbar navbar-expand-md navbar-dark">
       <div class="navbar-header" data-logobg="skin5"> <a class="navbar-brand" href="#"> <b class="logo-icon ps-2"> <img src="images/logo-icon.png" alt="homepage" class="light-logo" width="25" /> </b> <span class="logo-text ms-2"> <img src="images/logo-text.png" alt="homepage" class="light-logo" /> </span> </a> <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a> </div>
@@ -85,6 +85,12 @@
               <li class="sidebar-item"> <a href="viewTeam.html" class="sidebar-link"><i class="mdi mdi-account-card-details"></i> <span class="hide-menu">View Team</span></a> </li>
             </ul>
           </li>
+          <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"> <i class="mdi mdi-account-multiple-plus"></i><span class="hide-menu">Reports</span></a>
+            <ul aria-expanded="false" class="collapse first-level">
+              <li class="sidebar-item"> <a href="taskReport.html" class="sidebar-link"><i class="mdi mdi-account-star"></i> <span class="hide-menu">Task Report</span></a> </li>
+              <li class="sidebar-item"> <a href="editTeam.html" class="sidebar-link"><i class="mdi mdi-account-star"></i> <span class="hide-menu">Average Variance</span></a> </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- End Sidebar navigation --> 
@@ -94,7 +100,7 @@
     <div class="page-breadcrumb">
       <div class="row">
         <div class="col-12 d-flex no-block align-items-center">
-          <h4 class="page-title">View Clients</h4>
+          <h4 class="page-title">Task Report</h4>
           <div class="ms-auto text-end">
             <button type="button" class="btn btn-warning btn-sm">
                     <i class="mdi mdi-chevron-left"></i>Back
@@ -107,29 +113,97 @@
       <div class="row">
         <div class="card">
           <div class="card-body">
+            <div class="dataTables_wrapper container-fluid mb-4">
+              <div class="row">
+                <div class="col-sm-12 col-md-3">
+                  <div id="zero_config_filter" class="dataTables_filter">
+                    <label>Client Name* :
+                      <input type="search" class="form-control form-control-sm" placeholder="">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                  <div id="zero_config_filter" class="dataTables_filter">
+                    <label>Project Name* :
+                      <input type="search" class="form-control form-control-sm" placeholder="">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                  <div id="zero_config_filter" class="dataTables_filter">
+                    <label>Team Name* :
+                      <input type="search" class="form-control form-control-sm" placeholder="">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                  <div id="zero_config_filter" class="dataTables_filter">
+                    <label>Employee Name :
+                      <input type="search" class="form-control form-control-sm" placeholder="">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                  <div id="zero_config_filter" class="dataTables_filter">
+                    <label>Status :
+                      <input type="search" class="form-control form-control-sm" placeholder="">
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-5">
+                  <div id="zero_config_filter" class="dataTables_filter">
+                    <label> Date Range :
+                      <input id="start" class="form-control form-control-sm" placeholder="Start Date" />
+                    </label>
+                    <label> to
+                      <input id="end" class="form-control form-control-sm" placeholder="End Date" />
+                    </label>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                  <div id="zero_config_filter" class="dataTables_filter"><a href="#" class="link-success">Export to Excel <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-file-excel fa-stack-1x fa-inverse"></i> </span></a></div>
+                </div>
+              </div>
+            </div>
             <div class="table-responsive">
               <div id="zero_config_wrapper" class="dataTables_wrapper container-fluid">
-                <table class="table table-striped table-bordered">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <table class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Client Name</th>
-                          <th>Country Name</th>
-                          <th>Action</th>
+                          <th>Employee Name</th>
+                          <th>Task Name</th>
+                          <th>Start Date</th>
+                          <th>End Date</th>
+                          <th>Start Time</th>
+                          <th>End Time</th>
+                          <th>Time Estimate</th>
+                          <th>Actual Time</th>
+                          <th>Extra Time</th>
+                          <th>Status</th>
+                          <th>Variance</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>Client Name-1</td>
-                          <td>Country Name-1</td>
-                          <td> <a href="editClient.html" class="link-success"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-pencil-alt fa-stack-1x fa-inverse"></i> </span> </a> <a href="#" class="link-danger"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-trash-alt fa-stack-1x fa-inverse"></i> </span> </a> </td>
-                        </tr>
-                        <tr>
-                          <td>Client Name-2</td>
-                          <td>Country Name-2</td>
-                          <td> <a href="editClient.html" class="link-success"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-pencil-alt fa-stack-1x fa-inverse"></i> </span> </a> <a href="#" class="link-danger"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-trash-alt fa-stack-1x fa-inverse"></i> </span> </a> </td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
                         </tr>
                       </tbody>
                     </table>
+                  </div>
+                </div>
                 <div class="row">
                   <div class="col-sm-12 col-md-5">
                     <div class="dataTables_info" id="zero_config_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div>
@@ -159,7 +233,7 @@
 <script src="js/perfect-scrollbar.jquery.min.js"></script> 
 <script src="js/sparkline.js"></script> 
 <script src="js/waves.js"></script> 
-<script src="js/sidebarmenu.js"></script>
+<script src="js/sidebarmenu.js"></script> 
 <script src="js/custom.min.js"></script> 
 <script src="js/datatables.min.js"></script> 
 <script>
