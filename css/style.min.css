@@ -1328,7 +1328,10 @@ margin-top:calc(var(--bs-gutter-y) * -1);
 	vertical-align: inherit
 }
 .table>thead {
-	vertical-align: bottom
+	vertical-align: bottom;
+	background-color: #00ffff;
+	position: sticky;
+	top: 0;
 }
 .table>:not(:last-child)>:last-child>* {
 	border-bottom-color: currentColor
@@ -11647,4 +11650,26 @@ label {
 
 .active {
   display: block;
-}*/
+}
+
+.taskInfo {
+	background-color: transparent;
+}
+.taskInfo a {
+    background-color: #ffb848;
+	    transition: all 0.25s ease;
+}
+
+.taskInfo a:hover {
+	background-color: #e29e33;
+	transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 14px 24px rgb(62 57 107 / 10%);
+}
+.taskInfo a:active {
+	outline: #4CAF50 solid 4px;
+}
+
+.taskInfo a:visited {
+	outline: #4CAF50 solid 4px;
+}
+
