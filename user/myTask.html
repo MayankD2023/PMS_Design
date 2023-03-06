@@ -31,7 +31,15 @@
         </ul>
         <ul class="navbar-nav float-end">
           <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="mdi mdi-bell font-24"></i> </a> </li>
-          <li class="nav-item dropdown"> <a class=" nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <img src="images/1.jpg" alt="user" class="rounded-circle" width="31" /> </a> </li>
+          <li class="nav-item dropdown"> <a class=" nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <img src="images/1.jpg" alt="user" class="rounded-circle" width="31" /> </a>
+              <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
+                  <!--<a class="dropdown-item" href=""><i class="mdi mdi-account me-1 ms-1"></i> My Profile</a>
+                  <a class="dropdown-item" href=""><i class="mdi mdi-wallet me-1 ms-1"></i> My Balance</a>-->
+                  <a class="dropdown-item" href=""><i class="mdi mdi-email me-1 ms-1"></i> Change Password</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href=""><i class="fa fa-power-off me-1 ms-1"></i> Logout</a>
+              </ul>
+            </li>
         </ul>
       </div>
     </nav>
@@ -100,6 +108,17 @@
                 <div class="col-sm-12 col-md-3">
                   <div id="zero_config_filter" class="dataTables_filter"><a href="#" class="link-success"><span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-file-excel fa-stack-1x fa-inverse"></i> </span></a></div>
                 </div>
+                <div class="col-sm-12 col-md-3">
+                  <div id="zero_config_filter" class="dataTables_filter">
+                    <label> Date Range:
+                      <input id="start" class="form-control form-control-sm" placeholder="Start Date">
+                    </label>
+                    <label> to
+                      <input id="end" class="form-control form-control-sm" placeholder="End Date">
+                    </label>
+                    
+                  </div>
+                </div>
               </div>
             </div>
             <div class="table-responsive">
@@ -115,7 +134,7 @@
                           <th>Start Date</th>
                           <th>End Date</th>
                           <th>View</th>
-                          <th>Play/Pause</th>
+                          <th>Assign/Play/Pause</th>
                           <th>Status</th>
                         </tr>
                       </thead>
@@ -126,7 +145,7 @@
                           <td>6</td>
                           <td>10-01-2023</td>
                           <td>10-03-2023</td>
-                          <td><a href="taskDetails.html" class="link-info"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-eye fa-stack-1x fa-inverse"></i> </span> </a></td>
+                          <td><a href="taskDetails.html"> <button type="button" class="btn btn-info badge"><span class="fa-stack">  <i class="fa fa-eye fa-stack-1x fa-inverse"></i> </span> </button></a></td>
       					<td></td>
       					<td>Completed</td>
                         </tr>
@@ -136,24 +155,45 @@
                           <td>6</td>
                           <td>10-01-2023</td>
                           <td></td>
-                          <td><a href="taskDetails.html" class="link-info"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-eye fa-stack-1x fa-inverse"></i> </span> </a></td>
-      					<td><a href="" class="link-danger"><span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-play fa-stack-1x fa-inverse"></i> </span></a><a href="" class="link-danger"><span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-pause fa-stack-1x fa-inverse"></i> </span></a> <a href="#"><select name="languages" id="lang">
-        <option value="">Resion</option>
-        <option value="">Lunch Break</option>
-        <option value="">Tea Break</option>
-        <option value="">Other</option>
-      </select></a></td>
+                          <td><a href="taskDetails.html"> <button type="button" class="btn btn-info badge"><span class="fa-stack">  <i class="fa fa-eye fa-stack-1x fa-inverse"></i> </span> </button></a></td>
+      					<td><button type="button" class="btn btn-danger badge"><span class="fa-stack"> <i class="fa fa-play fa-stack-1x fa-inverse"></i> </span></button>
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger badge" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <span class="fa-stack">  <i class="fa fa-pause fa-stack-1x fa-inverse"></i> </span>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <select name="languages" id="lang" class="form-select">
+            <option value="">----Select Reason----</option>
+            <option value="">Lunch Break</option>
+            <option value="">Tea Break</option>
+            <option value="">Other</option>
+      	</select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success text-white">Submit</button>
+      </div>
+    </div>
+  </div>
+</div></td>
       					<td>Active</td>
                         </tr>
                         <tr>
                           <td><a href="#">pqr</a></td>
                           <td><a href="">XYZ</a></td>
                           <td>6</td>
-                          <td>10-01-2023</td>
                           <td></td>
-                          <td><a href="taskDetails.html" class="link-info"> <span class="fa-stack"> <i class="fa fa-square fa-stack-2x"></i> <i class="fa fa-eye fa-stack-1x fa-inverse"></i> </span> </a></td>
-      					<td></td>
+                          <td></td>
+                          <td><a href="taskDetails.html"> <button type="button" class="btn btn-info badge"><span class="fa-stack">  <i class="fa fa-eye fa-stack-1x fa-inverse"></i> </span> </button></a></td>
       					<td><a href="TaskAssign.html"><span class="badge bg-success">Assign</span></a></td>
+      					<td>Unassign</td>
                         </tr>
                       </tbody>
                     </table>
